@@ -35,25 +35,25 @@ def getquest():
 
 # === Creat mail === #
 def sendmail():
-    #设置邮箱信息
+    #Set mail box
     from_addr = '37870979@qq.com'
     password = 'fcapyvxmjdbzbgji'
     to_addr = 'lucasgongsun@163.com'
     smtp_server = 'smtp.qq.com'
-    #设置正文信息
+    #Set content
     msg = MIMEText(todayquest, 'plain', 'utf-8')
-    #设置邮件头信息
+    #Set mail header
     msg['From'] = Header(from_addr)
     msg['To'] = Header(to_addr)
     msg['Subject'] = Header('今日学习任务')
-    #开启发信服务
+    #Send
     server = smtplib.SMTP_SSL(host=smtp_server)
     server.connect(smtp_server,465)
     server.login(from_addr, password)
     server.sendmail(from_addr, to_addr, msg.as_string())
     server.quit()
 
-# === 定时发送 === #
+# === Schedule === #
 def job():
     getquest()
     sendmail()

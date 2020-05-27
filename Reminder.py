@@ -2,38 +2,38 @@ import openpyxl, datetime, smtplib, schedule
 from email.mime.text import MIMEText
 from email.header import Header
 
-#设置操作对象
+#Setting
 wb = openpyxl.load_workbook('calendar.xlsx')
 ws = wb['Jap']
 datelist = []
 notelist = []
 checklist = {}
 
-# === 构筑列表 === #
+# === Create list === #
 def getquest():
     global todayquest
-    #读取日期
+    #Read date
     for row in ws.iter_rows(min_row=1, max_col=1, max_row=185):
         for cell in row:
             datelist.append(cell.value)
-    #读取笔记序列
+    #Read list
     for row in ws.iter_rows(min_row=1, max_row=185, min_col=2, max_col=8):
         new_row = []
         for cell in row:
             new_row.append(cell.value)
         notelist.append(new_row)
-    #组合日期与笔记序列
+    #Combine date and list
     for i in range(185):
         checklist[datelist[i]] = notelist[i]
 
-    # === 读取今日列表 === #
+    # === Get today quest === #
     a = datetime.datetime.today()
     today = datetime.datetime(a.year, a.month, a.day, 0,0,0)
     todaylist = checklist[today]
     todaylist_str = "；".join(todaylist)
     todayquest = '今天的学习任务是：' + todaylist_str
 
-# === 生成邮件 === #
+# === Creat mail === #
 def sendmail():
     #设置邮箱信息
     from_addr = '37870979@qq.com'

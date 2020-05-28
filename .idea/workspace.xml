@@ -19,30 +19,130 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b002146-130e-4abe-80cc-d46030b057de" name="Default Changelist" comment="">
+    <list default="true" id="7b002146-130e-4abe-80cc-d46030b057de" name="Default Changelist" comment="527 updated">
+      <change afterPath="$PROJECT_DIR$/E2J_Calendar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/E2J_Contents.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/calendar.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contents.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reminder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reminder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tesy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/contents.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="git@github.com:LucasGONGSUN/JLR.git" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1cTShEFfrFunExGT0x8jsIwI0MA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lucas\PycharmProjects\JLR" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Reminder">
+    <configuration name="E2J_Calendar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JLR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\E2J_Calendar.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2J_Contents" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JLR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\E2J_Contents.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Reminder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JLR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Reminder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Reminder" />
+        <item itemvalue="Python.E2J_Contents" />
+        <item itemvalue="Python.E2J_Calendar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -55,6 +155,21 @@
       <option name="presentableId" value="Default" />
       <updated>1590551206911</updated>
     </task>
+    <task id="LOCAL-00001" summary="527 updated">
+      <created>1590559425252</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590559425252</updated>
+    </task>
+    <task id="LOCAL-00002" summary="527 updated">
+      <created>1590629467133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590629467133</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -67,11 +182,49 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="527 updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="527 updated" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="533" y="237" key="FileChooserDialogImpl" timestamp="1590561809827">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="533" y="237" key="FileChooserDialogImpl/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561809827" />
+    <state width="1483" height="256" key="GridCell.Tab.0.bottom" timestamp="1590685355844">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="256" key="GridCell.Tab.0.bottom/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561772279" />
+    <state width="1483" height="256" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1590685355844" />
+    <state width="1483" height="256" key="GridCell.Tab.0.center" timestamp="1590685355844">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="256" key="GridCell.Tab.0.center/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561772279" />
+    <state width="1483" height="256" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1590685355844" />
+    <state width="1483" height="256" key="GridCell.Tab.0.left" timestamp="1590685355844">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="256" key="GridCell.Tab.0.left/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561772279" />
+    <state width="1483" height="256" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1590685355844" />
+    <state width="1483" height="256" key="GridCell.Tab.0.right" timestamp="1590685355844">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="256" key="GridCell.Tab.0.right/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561772279" />
+    <state width="1483" height="256" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1590685355844" />
     <state x="254" y="127" key="SettingsEditor" timestamp="1590551301668">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="254" y="127" key="SettingsEditor/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590551301668" />
+    <state x="345" y="215" key="Vcs.Push.Dialog.v2" timestamp="1590629503321">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="345" y="215" key="Vcs.Push.Dialog.v2/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590629503321" />
+    <state x="486" y="270" key="git4idea.merge.GitPullDialog" timestamp="1590629345803">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="486" y="270" key="git4idea.merge.GitPullDialog/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590629345803" />
   </component>
 </project>

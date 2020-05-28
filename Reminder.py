@@ -1,47 +1,59 @@
-import openpyxl, datetime, smtplib, schedule
+import json, datetime, smtplib, schedule
 from email.mime.text import MIMEText
 from email.header import Header
 
 #Setting
-wb = openpyxl.load_workbook('calendar.xlsx')
-ws = wb['Jap']
-datelist = []
-notelist = []
-checklist = {}
+TodayContent = {}
+LearningContent = []
 
-# === Create list === #
-def getquest():
-    global todayquest
-    #Read date
-    for row in ws.iter_rows(min_row=1, max_col=1, max_row=185):
-        for cell in row:
-            datelist.append(cell.value)
-    #Read list
-    for row in ws.iter_rows(min_row=1, max_row=185, min_col=2, max_col=8):
-        new_row = []
-        for cell in row:
-            new_row.append(cell.value)
-        notelist.append(new_row)
-    #Combine date and list
-    for i in range(185):
-        checklist[datelist[i]] = notelist[i]
+# === Get Checklist dict from Json as a dict === #
+def Json2Dict():
+    global Checklist, Contentlist
+    FileJsonName_date = 'calendar.json'
+    with open(FileJsonName_date, 'r') as d:
+        Checklist = json.load(d)
+    FileJsonName_content = 'contents.json'
+    with open(FileJsonName_content, 'r') as c:
+        Contentlist = json.load(c)
 
-    # === Get today quest === #
-    a = datetime.datetime.today()
-    today = datetime.datetime(a.year, a.month, a.day, 0,0,0)
-    todaylist = checklist[today]
-    todaylist_str = "；".join(todaylist)
-    todayquest = '今天的学习任务是：' + todaylist_str
+# === Get TodayQuest from dict === #
+def GetQuest():
+    global TodayList, TodayQuest
+    TodayDate = datetime.datetime.today()
+    Today = str(datetime.datetime(TodayDate.year, TodayDate.month, TodayDate.day, 0,0,0))
+    TodayList = Checklist[Today]
+    TodayQuest = '今天的学习任务是：' + str(TodayList) + '\n\n'
+
+# === Get TodayContents from Excel === #
+def GetContent():
+    global TodayContent
+    for i in TodayList:
+        try:
+            TodayContent[i] = Contentlist[i]
+        except KeyError:
+            continue
+
+# === Create MailContent for pushing === #
+def CreateMailContent():
+    global MailContent
+    for keys, values in TodayContent.items():
+        entry_key = '\n' + keys + '\n'
+        LearningContent.append(entry_key)
+        for value in values:
+            entry_value = value + '\n'
+            LearningContent.append(entry_value)
+    LearningContent_str = " ".join(LearningContent)
+    MailContent = TodayQuest + LearningContent_str
 
 # === Creat mail === #
-def sendmail():
+def SendMail():
     #Set mail box
     from_addr = '37870979@qq.com'
     password = 'fcapyvxmjdbzbgji'
     to_addr = 'lucasgongsun@163.com'
     smtp_server = 'smtp.qq.com'
     #Set content
-    msg = MIMEText(todayquest, 'plain', 'utf-8')
+    msg = MIMEText(MailContent, 'plain', 'utf-8')
     #Set mail header
     msg['From'] = Header(from_addr)
     msg['To'] = Header(to_addr)
@@ -55,8 +67,13 @@ def sendmail():
 
 # === Schedule === #
 def job():
-    getquest()
-    sendmail()
+    Json2Dict()
+    GetQuest()
+    GetContent()
+    CreateMailContent()
+    SendMail()
+    print('Mail Sent!')
 
-schedule.every().day.at("8:00").do(job)
+#schedule.every().day.at("8:00").do(job)
+job()
 

@@ -1,21 +1,28 @@
 # JLR
 Japanese Learning Reminder
 
+# List of Files
+calendar.xlsx - origin learning schedule
+calendar.json
+contents.xlsx - origin learning content which will be edited offline everyday
+contents.json
+E2J_Calendar.py - convert learning schedule from Excel to Json file
+E2J_Contents.py - convert learning contents from Excel to Json file
+Reminder.py - main body of program
+
 # Version Update Info.
 
-2020.5.27 - alpha.527:
-  1. create a dict with date as keys and list as values; get todaylist via date and then send to receivers by e-mail. - done
-  2. write down learning contents in textbook - done
-  
-2020.5.28 - alpha.528
-  1. write learning contents in xlsx; - done
-  2. create a dict with openpyxl and then save in json format, save in the same fold
-  3. load json and xlsx, read json and get todaylist, search for today's learning content in xlsx, send to reveivers.
-  
+2020.5.29 - alpha.529:
+    1. Set workflow of alpha version:
+        1. Write down learning schedule in Excel
+        2. Update learning contents everyday in Excel
+        3. Convert both learning schedule and contents into Json files for further processing
+        4. Load daily schedule and contents from Json files
+        5. Draw a mail and then send to receivers automatically.
   
   
   
-  
-longview
-  1. input today's content to autosave in json.
-  2. all process can be operate in a website
+# Longview
+  1. input daily learning content, and then save in online database automatically
+  2. all process can be operate online
+  3. can save and send content for individual user

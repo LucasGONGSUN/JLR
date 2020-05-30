@@ -19,7 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b002146-130e-4abe-80cc-d46030b057de" name="Default Changelist" comment="527 updated" />
+    <list default="true" id="7b002146-130e-4abe-80cc-d46030b057de" name="Default Changelist" comment="527 updated">
+      <change afterPath="$PROJECT_DIR$/Check_Json_Content.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContentsCorrect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contents_I2J.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Contents_fromInput - copia.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contents_fromInput.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E2J_Calendar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calendar_E2J.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/E2J_Contents.py" beforeDir="false" afterPath="$PROJECT_DIR$/Contents_E2J.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reminder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Reminder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calendar.json" beforeDir="false" afterPath="$PROJECT_DIR$/Calendar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calendar.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Calendar.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contents_fromExcel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contents.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Contents.xlsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Scrapy" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -63,8 +77,8 @@
       <recent name="C:\Users\Lucas\PycharmProjects\JLR" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Reminder">
-    <configuration name="E2J_Calendar" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Check_Json_Content">
+    <configuration name="Check_Json_Content" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JLR" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,7 +90,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\E2J_Calendar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Check_Json_Content.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="E2J_Contents" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ContentsCorrect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JLR" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -97,7 +111,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\E2J_Contents.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\ContentsCorrect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Contents_E2J" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JLR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\Contents_E2J.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Contents_I2J" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JLR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\Contents_I2J.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -129,9 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Check_Json_Content" />
         <item itemvalue="Python.Reminder" />
-        <item itemvalue="Python.E2J_Contents" />
-        <item itemvalue="Python.E2J_Calendar" />
+        <item itemvalue="Python.ContentsCorrect" />
+        <item itemvalue="Python.Contents_I2J" />
+        <item itemvalue="Python.Contents_E2J" />
       </list>
     </recent_temporary>
   </component>
@@ -188,30 +246,46 @@
     <option name="LAST_COMMIT_MESSAGE" value="527 updated" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="237" key="FileChooserDialogImpl" timestamp="1590561809827">
+    <state x="533" y="237" key="FileChooserDialogImpl" timestamp="1590723595673">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="533" y="237" key="FileChooserDialogImpl/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561809827" />
-    <state width="1483" height="256" key="GridCell.Tab.0.bottom" timestamp="1590686477428">
+    <state x="533" y="237" key="FileChooserDialogImpl/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590723595673" />
+    <state width="1483" height="225" key="GridCell.Tab.0.bottom" timestamp="1590851679496">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="256" key="GridCell.Tab.0.bottom/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561772279" />
-    <state width="1483" height="256" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1590686477428" />
-    <state width="1483" height="256" key="GridCell.Tab.0.center" timestamp="1590686477428">
+    <state width="1483" height="256" key="GridCell.Tab.0.bottom/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590719725328" />
+    <state width="1483" height="225" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1590851679496" />
+    <state width="1483" height="225" key="GridCell.Tab.0.center" timestamp="1590851679496">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="256" key="GridCell.Tab.0.center/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561772279" />
-    <state width="1483" height="256" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1590686477428" />
-    <state width="1483" height="256" key="GridCell.Tab.0.left" timestamp="1590686477427">
+    <state width="1483" height="256" key="GridCell.Tab.0.center/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590719725328" />
+    <state width="1483" height="225" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1590851679496" />
+    <state width="1483" height="225" key="GridCell.Tab.0.left" timestamp="1590851679496">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="256" key="GridCell.Tab.0.left/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561772279" />
-    <state width="1483" height="256" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1590686477427" />
-    <state width="1483" height="256" key="GridCell.Tab.0.right" timestamp="1590686477428">
+    <state width="1483" height="256" key="GridCell.Tab.0.left/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590719725328" />
+    <state width="1483" height="225" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1590851679496" />
+    <state width="1483" height="225" key="GridCell.Tab.0.right" timestamp="1590851679496">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="256" key="GridCell.Tab.0.right/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590561772279" />
-    <state width="1483" height="256" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1590686477428" />
+    <state width="1483" height="256" key="GridCell.Tab.0.right/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590719725328" />
+    <state width="1483" height="225" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1590851679496" />
+    <state width="1483" height="236" key="GridCell.Tab.1.bottom" timestamp="1590770614510">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="236" key="GridCell.Tab.1.bottom/0.0.1504.963@0.0.1504.963" timestamp="1590770614510" />
+    <state width="1483" height="236" key="GridCell.Tab.1.center" timestamp="1590770614510">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="236" key="GridCell.Tab.1.center/0.0.1504.963@0.0.1504.963" timestamp="1590770614510" />
+    <state width="1483" height="236" key="GridCell.Tab.1.left" timestamp="1590770614510">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="236" key="GridCell.Tab.1.left/0.0.1504.963@0.0.1504.963" timestamp="1590770614510" />
+    <state width="1483" height="236" key="GridCell.Tab.1.right" timestamp="1590770614510">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state width="1483" height="236" key="GridCell.Tab.1.right/0.0.1504.963@0.0.1504.963" timestamp="1590770614510" />
     <state x="254" y="127" key="SettingsEditor" timestamp="1590686707588">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
@@ -222,9 +296,14 @@
     </state>
     <state x="345" y="215" key="Vcs.Push.Dialog.v2/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590629503321" />
     <state x="345" y="215" key="Vcs.Push.Dialog.v2/0.0.1504.963@0.0.1504.963" timestamp="1590686402182" />
-    <state x="486" y="270" key="git4idea.merge.GitPullDialog" timestamp="1590629345803">
+    <state x="486" y="270" key="git4idea.merge.GitPullDialog" timestamp="1590687278351">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="486" y="270" key="git4idea.merge.GitPullDialog/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590629345803" />
+    <state x="486" y="270" key="git4idea.merge.GitPullDialog/0.0.1504.963@0.0.1504.963" timestamp="1590687278351" />
+    <state x="415" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1590755547998">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="415" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1504.963@0.0.1504.963" timestamp="1590755547998" />
   </component>
 </project>

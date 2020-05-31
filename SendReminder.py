@@ -2,11 +2,12 @@ import json, datetime, smtplib, schedule
 from email.mime.text import MIMEText
 from email.header import Header
 
-#Settings
+# Settings
 #MailToList = ['lucasgongsun@163.com', '443936352@qq.com']   ### Only for testing
 MailToList = ['lucasgongsun@163.com', '443936352@qq.com', 'jo.wang.220@hotmail.com']
 TodayContent = {}
 LearningContent = []
+
 
 # === Get Checklist and Contentlist from Json as dicts === #
 def Json2Dict():
@@ -38,18 +39,22 @@ def GetContent():
 # === Create MailContent for pushing === #
 def CreateMailContent():
     global MailContent
+
     #Get Number and CONTENTS_DICT from TodayContent
     for nums, contents in TodayContent.items():
         entry_num = '\n\n\n === Learning Contents %s === \n' %nums
         LearningContent.append(entry_num)
+
         #Get Kanzi and DETAILS_DICT from CONTENTS_DICT
         for kanzis, details in contents.items():
             entry_kanzi = '\n --- %s --- \n' %kanzis
             LearningContent.append(entry_kanzi)
+
             #Get details from DETAILS_DICT
             for keys, values in details.items():
                 entry_keys_values = '%s : %s \n' %(keys, values)
                 LearningContent.append(entry_keys_values)
+
     #Combine together
     LearningContent_str = " ".join(LearningContent)
     MailContent = TodayQuest + LearningContent_str
@@ -61,12 +66,15 @@ def SendMail():
     password = 'fcapyvxmjdbzbgji'
     to_addrs = MailToList
     smtp_server = 'smtp.qq.com'
+
     #Set content
     msg = MIMEText(MailContent, 'plain', 'utf-8')
+
     #Set mail header
     msg['From'] = Header(from_addr)
     msg['To'] = ','.join(to_addrs)
     msg['Subject'] = Header('今日学习任务')
+
     #Send
     server = smtplib.SMTP_SSL(host=smtp_server)
     server.connect(smtp_server, 465)
@@ -75,7 +83,7 @@ def SendMail():
     server.quit()
 
 # === Schedule === #
-def Job():
+def DrawAndSend():
     Json2Dict()
     GetQuest()
     GetContent()
@@ -84,4 +92,4 @@ def Job():
     print('All mails are sent!')
 
 #schedule.every().day.at("8:00").do(job)
-Job()
+#DrawAndSend()

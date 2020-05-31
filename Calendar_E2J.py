@@ -15,12 +15,14 @@ def Createlist():
     for row in WS.iter_rows(min_row=1, max_row=185, max_col=1):
         for cell in row:
             DateList.append(cell.value)
+
     # Read notelist from calendar
     for row in WS.iter_rows(min_row=1, max_row=185, min_col=2, max_col=8):
         new_row = []
         for cell in row:
             new_row.append(cell.value)
         NoteList.append(new_row)
+
     # Combine date and notelist
     for i in range(185):
         Checklist[str(DateList[i])] = NoteList[i]

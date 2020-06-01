@@ -1,7 +1,7 @@
 import json
 
 # Settings
-FileJsonName = 'Contents_fromInput.json'
+FileJsonName = 'JLR_Contents.json'
 
 
 # === Load Json file from "FileJsonName" === #
@@ -42,11 +42,13 @@ def ShowLCNList(ContentList):
 
 
     # Print inquired contents
-    for i in range(ListNumberStart, ListNumberEnd+1):
-        print('\n\n===== Here are the contents of No.%s =====\n' %str(i))
-        for keys, values in ContentList['No.'+str(i)].items():
-            print(keys + ': ' + str(values))
-
+    try:
+        for i in range(ListNumberStart, ListNumberEnd+1):
+            print('\n\n===== Here are the contents of No.%s =====\n' %str(i))
+            for keys, values in ContentList['No.'+str(i)].items():
+                print(keys + ': ' + str(values))
+    except KeyError:
+        print('The List No. is out of range. Please try again.\n')
 
 def Job():
     LoadJsonFile()

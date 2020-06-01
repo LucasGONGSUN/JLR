@@ -32,7 +32,7 @@ def Createlist():
 def Dict2Json():
     FileJsonName = 'Calendar.json'
     with open(FileJsonName, 'w') as file_obj:
-        json.dump(Checklist, file_obj)
+        json.dump(Checklist, file_obj, indent=2)
 
 Createlist()
 Dict2Json()

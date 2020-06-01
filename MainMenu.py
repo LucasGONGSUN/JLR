@@ -2,7 +2,7 @@ import json
 
 
 # Settings
-FileJsonName = 'Contents_fromInput.json'
+FileJsonName = 'JLR_Contents.json'
 
 
 # === Load Json file from "FileJsonName" === #
@@ -25,7 +25,7 @@ def MainMenu():
             3. Continue Unfinished Entry
             4. Correct Values
             5. Send Daily Schedule
-            6. Save The Last Updates
+            6. Save, Export or Import
             7. Quit
             
     ''')
@@ -60,7 +60,35 @@ def MainMenu():
 
         # Save updated ContentList to Json file
         elif FunctionChoice == '6':
-            SaveJsonFile()
+            print('''
+    ====== Please Choose A Method ======
+            
+        1. Save to Json File
+        2. Export to Excel File
+        3. Upload to MangoDB
+        
+        4. Import From Excel File
+             
+        ''')
+            MethodChoice = input('Please Enter the NUMBER of a method: ')
+
+            # Save to Json
+            if MethodChoice == '1':
+                SaveJsonFile()
+
+            # Export to Excel
+            elif MethodChoice == '2':
+                from Contents_ExJ import JsonToExcel
+                JsonToExcel()
+
+            # Upload to MangoDB
+            elif MethodChoice == '3':
+                print('To be continued ... ')
+
+            # Import from Excel
+            elif MethodChoice == '4':
+                from Contents_ExJ import ExcelToJson
+                ExcelToJson()
 
         # Quit Main Menu
         elif FunctionChoice == '7':
@@ -70,7 +98,7 @@ def MainMenu():
 # === Save as Json file === #
 def SaveJsonFile():
     with open(FileJsonName, 'w') as file_obj_w:
-        json.dump(ContentList, file_obj_w)
+        json.dump(ContentList, file_obj_w, indent=2)
     print('\n>>> All updates are saved. Mission Completed! <<<')
 
 

@@ -4,7 +4,7 @@ import json
 # Settings
 #EntryList_example = {
 #    'No.1':{'本': {'漢字': '本', '訓読': 'もと', '訓読例': '本（もと）', '音読': 'ホン', '音読例': '日本（にほん）'}}}
-FileJsonName = 'Contents_fromInput.json'
+FileJsonName = 'JLR_Contents.json'
 
 
 # === Load old ContentList from Json === #
@@ -83,7 +83,7 @@ def InputNewEntry(ContentList):
 # === Save as Json file === #
 def SaveJsonFile():
     with open(FileJsonName, 'w') as file_obj_w:
-        json.dump(ContentList, file_obj_w)
+        json.dump(ContentList, file_obj_w, indent=2)
     print('\n>>> List %s is saved. Mission Completed! <<<' %EntryNum)
 
 

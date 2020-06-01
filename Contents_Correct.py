@@ -1,7 +1,7 @@
 import json
 
 # Settings
-FileJsonName = 'Contents_fromInput.json'
+FileJsonName = 'JLR_Contents.json'
 
 # === Load old ContentList from Json === #
 def LoadJsonFile():
@@ -57,7 +57,7 @@ def CorrectValue(ContentList):
 # === Save as Json file === #
 def SaveJsonFile(ContentList):
     with open(FileJsonName, 'w') as file_obj_w:
-        json.dump(ContentList, file_obj_w)
+        json.dump(ContentList, file_obj_w, indent=2)
     print('\n\n>>> Correction is Saved. Mission Completed! <<<')
 
 def Job():

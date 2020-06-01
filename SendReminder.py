@@ -19,6 +19,7 @@ def Json2Dict():
     with open(FileJsonName_content, 'r') as c:
         Contentlist = json.load(c)
 
+
 # === Get TodayQuest from Checklist === #
 def GetQuest():
     global TodayList, TodayQuest
@@ -26,6 +27,7 @@ def GetQuest():
     Today = str(datetime.datetime(TodayDate.year, TodayDate.month, TodayDate.day, 0,0,0))
     TodayList = Checklist[Today]
     TodayQuest = '今天的学习任务是：' + str(TodayList)
+
 
 # === Get TodayContents from Contentlist === #
 def GetContent():
@@ -35,6 +37,7 @@ def GetContent():
             TodayContent[i] = Contentlist[i]
         except KeyError:
             continue
+
 
 # === Create MailContent for pushing === #
 def CreateMailContent():
@@ -59,6 +62,7 @@ def CreateMailContent():
     LearningContent_str = " ".join(LearningContent)
     MailContent = TodayQuest + LearningContent_str
 
+
 # === Create mail === #
 def SendMail():
     #Set mail box
@@ -81,6 +85,7 @@ def SendMail():
     server.login(from_addr, password)
     server.sendmail(from_addr, to_addrs, msg.as_string())
     server.quit()
+
 
 # === Schedule === #
 def DrawAndSend():

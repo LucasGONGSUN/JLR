@@ -5,8 +5,10 @@ Japanese Learning Reminder
 # Version Update Info.
 
 2020.6.1  - alpha.June.1
-    1. Combined all functions in a text menu
-    2. optimized file structure and key params
+    1. New function: Import & Export of contents with Excel file
+    2. New function: Convert format between Json and Excel
+    3. Combined all functions in a text menu
+    4. Optimized file structure and key params
     
 2020.5.30 - alpha.530
     1. Update workflow:
@@ -25,15 +27,19 @@ Japanese Learning Reminder
 
 
 # Next Plan
-1. Optimize inputting trouble shoot
-2. Export to Excel and Import from Excel
+1. Optimize params transfer between functions
+2. Upload data to MangoDB
 
 
 # List of Files
+--- Main Body ---
+MainMenu.py
+SendReminder.py - Create daily learning schedule and contents, then send to receivers
+  
 --- Calendar ---
-Calendar_E2J.py - convert learning schedule from Excel to Json file
+Calendar_E2J.py - Convert learning schedule from Excel to Json file
 
-Calendar.xlsx - origin learning schedule
+Calendar.xlsx - Origin learning schedule
 Calendar.json
 
 --- Contents ---
@@ -41,13 +47,12 @@ Contents_Inquiry.py - Inquire learning contents
 Contents_NewEntry.py - Input a new list of entries
 Contents_Continue.py - Continue to finish an entry
 Contents_Correct.py - Correct wrong values
+Contents_ExJ.py - Convert format between Excel and Json
 
-Contents_fromInput.json - Json file convert from Inputting in python
-Contents_fromInput - x.json - backup file with max list number of x
+JLR_Contents.xlsx - Excel file of learning contents
+JLR_Contents.json - Json file of learning contents
+JLR_Contents - x.json - Backup file with max list number of x
 
---- Mail ---
-SendReminder.py - create daily list and contents, then send to receivers
-  
 --- documents ---
 README.md
 JLR_WorkFlowAndFileStructure.xmind

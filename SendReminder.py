@@ -15,7 +15,7 @@ def Json2Dict():
     FileJsonName_date = 'Calendar.json'
     with open(FileJsonName_date, 'r') as d:
         Checklist = json.load(d)
-    FileJsonName_content = 'contents_fromInput.json'
+    FileJsonName_content = 'JLR_Contents.json'
     with open(FileJsonName_content, 'r') as c:
         Contentlist = json.load(c)
 
@@ -94,7 +94,7 @@ def DrawAndSend():
     GetContent()
     CreateMailContent()
     SendMail()
-    print('All mails are sent!')
+    print('\n>>> All mails are sent! <<<')
 
 #schedule.every().day.at("8:00").do(job)
 #DrawAndSend()

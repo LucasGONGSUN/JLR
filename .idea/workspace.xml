@@ -20,23 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b002146-130e-4abe-80cc-d46030b057de" name="Default Changelist" comment="527 updated">
-      <change afterPath="$PROJECT_DIR$/Contents_ExJ.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JLR_Contents - 8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JLR_Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JLR_Contents.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JLR_Contents - 8.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calendar.json" beforeDir="false" afterPath="$PROJECT_DIR$/Calendar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calendar_E2J.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calendar_E2J.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contents_Continue.py" beforeDir="false" afterPath="$PROJECT_DIR$/Contents_Continue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contents_Correct.py" beforeDir="false" afterPath="$PROJECT_DIR$/Contents_Correct.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contents_Inquiry.py" beforeDir="false" afterPath="$PROJECT_DIR$/Contents_Inquiry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contents_NewEntry.py" beforeDir="false" afterPath="$PROJECT_DIR$/Contents_NewEntry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contents_fromInput - 8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JLR_WorkFlowAndFileStructure.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/JLR_WorkFlowAndFileStructure.xmind" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainMenu.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JLR_Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/JLR_Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JLR_Contents.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/JLR_Contents.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SendReminder.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendReminder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contents_fromInput.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,26 +246,26 @@
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="533" y="237" key="FileChooserDialogImpl/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590723595673" />
-    <state width="1483" height="177" key="GridCell.Tab.0.bottom" timestamp="1591020605169">
+    <state width="1483" height="251" key="GridCell.Tab.0.bottom" timestamp="1591102455303">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="177" key="GridCell.Tab.0.bottom/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591020605169" />
-    <state width="1483" height="445" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1591018907972" />
-    <state width="1483" height="177" key="GridCell.Tab.0.center" timestamp="1591020605169">
+    <state width="1483" height="177" key="GridCell.Tab.0.bottom/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591021896515" />
+    <state width="1483" height="251" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1591102455303" />
+    <state width="1483" height="251" key="GridCell.Tab.0.center" timestamp="1591102455303">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="177" key="GridCell.Tab.0.center/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591020605169" />
-    <state width="1483" height="445" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1591018907972" />
-    <state width="1483" height="177" key="GridCell.Tab.0.left" timestamp="1591020605169">
+    <state width="1483" height="177" key="GridCell.Tab.0.center/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591021896515" />
+    <state width="1483" height="251" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1591102455303" />
+    <state width="1483" height="251" key="GridCell.Tab.0.left" timestamp="1591102455303">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="177" key="GridCell.Tab.0.left/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591020605169" />
-    <state width="1483" height="445" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1591018907972" />
-    <state width="1483" height="177" key="GridCell.Tab.0.right" timestamp="1591020605169">
+    <state width="1483" height="177" key="GridCell.Tab.0.left/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591021896515" />
+    <state width="1483" height="251" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1591102455303" />
+    <state width="1483" height="251" key="GridCell.Tab.0.right" timestamp="1591102455303">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="177" key="GridCell.Tab.0.right/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591020605169" />
-    <state width="1483" height="445" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1591018907972" />
+    <state width="1483" height="177" key="GridCell.Tab.0.right/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591021896515" />
+    <state width="1483" height="251" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1591102455303" />
     <state width="1483" height="236" key="GridCell.Tab.1.bottom" timestamp="1590770614510">
       <screen x="0" y="0" width="1504" height="963" />
     </state>

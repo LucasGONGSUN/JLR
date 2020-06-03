@@ -20,13 +20,11 @@ def MainMenu():
         print('''
     ====== Welcome to Japanese Learning Reminder ======
             
-            1. Inquire Learning Contents
-            2. Input A New Entry
-            3. Continue Unfinished Entry
-            4. Correct Values
-            5. Send Daily Schedule
-            6. Save, Export or Import
-            7. Quit
+            1. Load and Inquire Learning Contents
+            2. Edit Entries
+            3. Send Daily Schedule
+            4. Save, Export or Import
+            5. Quit
             
     ''')
 
@@ -35,63 +33,82 @@ def MainMenu():
 
         # Inquire Contents
         if FunctionChoice == '1':
+            LoadJsonFile()
             from Contents_Inquiry import ShowLCNList
             ShowLCNList(ContentList)
 
-        # Enter a New Entry
+        # Edit Entries
         elif FunctionChoice == '2':
-            from Contents_NewEntry import ContentCheckN
-            ContentCheckN(ContentList)
+            print('''
+    ====== Please Choose A Method ======
+    
+        1. Input A New Entry
+        2. Continue Unfinished Entry
+        3. Correct Values    
+        
+        ''')
+            MethodChoice_Edit = input('Please Enter the NUMBER of a method: ')
 
-        # Continue to input unfinished entry
-        elif FunctionChoice == '3':
-            from Contents_Continue import ContentCheckC
-            ContentCheckC(ContentList)
+            # Input a New Entry
+            if MethodChoice_Edit == '1':
+                from Contents_NewEntry import ContentCheckN
+                ContentCheckN(ContentList)
 
-        # Correct Values
-        elif FunctionChoice == '4':
-            from Contents_Correct import SearchValue
-            SearchValue(ContentList)
+            # Continue to input unfinished entry
+            elif MethodChoice_Edit == '2':
+                from Contents_Continue import ContentCheckC
+                ContentCheckC(ContentList)
+
+            # Correct Values
+            elif MethodChoice_Edit == '3':
+                from Contents_Correct import SearchValue
+                SearchValue(ContentList)
 
         # Send Reminders
-        elif FunctionChoice == '5':
+        elif FunctionChoice == '3':
             from SendReminder import DrawAndSend
             DrawAndSend()
 
         # Save updated ContentList to Json file
-        elif FunctionChoice == '6':
+        elif FunctionChoice == '4':
             print('''
     ====== Please Choose A Method ======
             
         1. Save to Json File
-        2. Export to Excel File
-        3. Upload to MangoDB
         
-        4. Import From Excel File
-             
+        2. Export to Excel File
+        3. Import From Excel File
+        
+        4. Upload to MangoDB
+        5. Download From MangoDB
+                     
         ''')
-            MethodChoice = input('Please Enter the NUMBER of a method: ')
+            MethodChoice_Convert = input('Please Enter the NUMBER of a method: ')
 
             # Save to Json
-            if MethodChoice == '1':
+            if MethodChoice_Convert == '1':
                 SaveJsonFile()
 
             # Export to Excel
-            elif MethodChoice == '2':
+            elif MethodChoice_Convert == '2':
                 from Contents_ExJ import JsonToExcel
                 JsonToExcel()
 
-            # Upload to MangoDB
-            elif MethodChoice == '3':
-                print('To be continued ... ')
-
             # Import from Excel
-            elif MethodChoice == '4':
+            elif MethodChoice_Convert == '3':
                 from Contents_ExJ import ExcelToJson
                 ExcelToJson()
 
+            # Upload to MangoDB
+            elif MethodChoice_Convert == '4':
+                print('To be continued ... ')
+
+            # Download From MangoDB
+            elif MethodChoice_Convert == '5':
+                print('To be continued ... ')
+
         # Quit Main Menu
-        elif FunctionChoice == '7':
+        elif FunctionChoice == '5':
             MenuRefresh = False
 
 

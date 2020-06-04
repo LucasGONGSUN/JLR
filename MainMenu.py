@@ -2,15 +2,27 @@ import json
 
 
 # Settings
-FileJsonName = 'JLR_Contents.json'
+FileJsonName_content = 'JLR_Contents.json'
+FileJsonName_user = 'UserInfo.json'
+FileJsonName_date = 'Calendar.json'
 
 
 # === Load Json file from "FileJsonName" === #
 def LoadJsonFile():
-    global ContentList
-    with open(FileJsonName, 'r') as file_obj_r:
-        ContentList = json.load(file_obj_r)
+    global Checklist, ContentList, Userlist
 
+    # Load Calendar from 'Calendar.json'
+    with open(FileJsonName_date, 'r') as dr:
+        Checklist = json.load(dr)
+
+    # Load Contents from 'JLR_Contents.json'
+    with open(FileJsonName_content, 'r') as cr:
+        ContentList = json.load(cr)
+
+    # Load User Info from 'UserInfo.json'
+    with open(FileJsonName_user, 'r') as ur:
+        Userlist = json.load(ur)
+    return Checklist, ContentList, Userlist
 
 # === Main Menu === #
 def MainMenu():
@@ -20,10 +32,12 @@ def MainMenu():
         print('''
     ====== Welcome to Japanese Learning Reminder ======
             
-            1. Load and Inquire Learning Contents
-            2. Edit Entries
-            3. Send Daily Schedule
-            4. Save, Export or Import
+            1. Save Calendar to Json File
+            2. Edit Users
+            3. Edit Contents
+            
+            4. Send Daily Learning Contents
+            
             5. Quit
             
     ''')
@@ -31,81 +45,111 @@ def MainMenu():
         # Choose a function
         FunctionChoice = input('Please Enter the NUMBER of a function: ')
 
-        # Inquire Contents
+        # Save Calendar from Excel to Json
         if FunctionChoice == '1':
-            LoadJsonFile()
-            from Contents_Inquiry import ShowLCNList
-            ShowLCNList(ContentList)
+            from Calendar_E2J import Save2Json
+            Save2Json()
 
-        # Edit Entries
-        elif FunctionChoice == '2':
+        # Edit Users
+        if FunctionChoice  == '2':
             print('''
-    ====== Please Choose A Method ======
+    ====== Please Choose A Method of Users ======
     
-        1. Input A New Entry
-        2. Continue Unfinished Entry
-        3. Correct Values    
+        1. Show List of Users
+        2. Add A New User
+        3. Import User List from Excel to Json
+        4. Export User List From Json to Excel    
+        
+        ''')
+            MethodChoice_User = input('Please Enter the NUMBER of a function: ')
+
+            # Show users list
+            if MethodChoice_User == '1':
+                from Users_ExJ import ShowUserList
+                ShowUserList()
+
+            # Add a new user
+            if MethodChoice_User == '2':
+                from Users_ExJ import AddNewUser
+                AddNewUser()
+
+            #User List from Excel to Json
+            if MethodChoice_User == '3':
+                from Users_ExJ import ExcelToJson
+                ExcelToJson()
+
+            #User List from Json to Excel
+            if MethodChoice_User == '4':
+                from Users_ExJ import  JsonToExcel
+                JsonToExcel()
+
+        # Edit Contents
+        elif FunctionChoice == '3':
+            print('''
+    ====== Please Choose A Method of Users ======
+    
+        1. Load of Inquire for Entries
+        2. Input A New Entry
+        2. Continue An Unfinished Entry
+        4. Correct Values
+        5. Save All Changes to Json File
+        
+        6. Import Contents From Excel to Json
+        7. Export Contents From Json to Excel
+        
+        8. Upload Contents to MangoDB
+        9. Download Contents From MangoDB
         
         ''')
             MethodChoice_Edit = input('Please Enter the NUMBER of a method: ')
 
-            # Input a New Entry
+            # Load and inquire Entries
             if MethodChoice_Edit == '1':
+                import Contents_Inquiry
+                Contents_Inquiry.LoadJsonFile()
+                Contents_Inquiry.ShowLCNList(ContentList)
+
+            # Input a New Entry
+            elif MethodChoice_Edit == '2':
                 from Contents_NewEntry import ContentCheckN
                 ContentCheckN(ContentList)
 
             # Continue to input unfinished entry
-            elif MethodChoice_Edit == '2':
+            elif MethodChoice_Edit == '3':
                 from Contents_Continue import ContentCheckC
                 ContentCheckC(ContentList)
 
             # Correct Values
-            elif MethodChoice_Edit == '3':
+            elif MethodChoice_Edit == '4':
                 from Contents_Correct import SearchValue
                 SearchValue(ContentList)
 
-        # Send Reminders
-        elif FunctionChoice == '3':
-            from SendReminder import DrawAndSend
-            DrawAndSend()
-
-        # Save updated ContentList to Json file
-        elif FunctionChoice == '4':
-            print('''
-    ====== Please Choose A Method ======
-            
-        1. Save to Json File
-        
-        2. Export to Excel File
-        3. Import From Excel File
-        
-        4. Upload to MangoDB
-        5. Download From MangoDB
-                     
-        ''')
-            MethodChoice_Convert = input('Please Enter the NUMBER of a method: ')
-
-            # Save to Json
-            if MethodChoice_Convert == '1':
+            # Save changes to Json
+            elif MethodChoice_Edit == '5':
                 SaveJsonFile()
 
-            # Export to Excel
-            elif MethodChoice_Convert == '2':
-                from Contents_ExJ import JsonToExcel
-                JsonToExcel()
-
-            # Import from Excel
-            elif MethodChoice_Convert == '3':
+            # Import contents from Excel
+            elif MethodChoice_Edit == '6':
                 from Contents_ExJ import ExcelToJson
                 ExcelToJson()
 
+            # Export to Excel
+            elif MethodChoice_Edit == '7':
+                from Contents_ExJ import JsonToExcel
+                JsonToExcel()
+
             # Upload to MangoDB
-            elif MethodChoice_Convert == '4':
+            elif MethodChoice_Edit == '8':
                 print('To be continued ... ')
 
             # Download From MangoDB
-            elif MethodChoice_Convert == '5':
+            elif MethodChoice_Edit == '9':
                 print('To be continued ... ')
+
+        # Send Reminders
+        elif FunctionChoice == '4':
+            from SendReminder import DrawAndSend
+            DrawAndSend()
 
         # Quit Main Menu
         elif FunctionChoice == '5':
@@ -114,7 +158,7 @@ def MainMenu():
 
 # === Save as Json file === #
 def SaveJsonFile():
-    with open(FileJsonName, 'w') as file_obj_w:
+    with open(FileJsonName_content, 'w') as file_obj_w:
         json.dump(ContentList, file_obj_w, indent=2)
     print('\n>>> All updates are saved. Mission Completed! <<<')
 

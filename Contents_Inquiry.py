@@ -9,7 +9,7 @@ def LoadJsonFile():
     global ContentList
     with open(FileJsonName, 'r') as file_obj_r:
         ContentList = json.load(file_obj_r)
-
+    return ContentList
 
 # === Show list numbers and contents === #
 def ShowLCNList(ContentList):
@@ -50,9 +50,9 @@ def ShowLCNList(ContentList):
     except KeyError:
         print('The List No. is out of range. Please try again.\n')
 
-def Job():
+def LoadandShow():
     LoadJsonFile()
     ShowLCNList(ContentList)
 
 
-#Job()
+#LoadandShow()

@@ -4,7 +4,13 @@ Japanese Learning Reminder
 
 # Version Update Info.
 
-2020.6.1  - alpha.June.1
+2020.6.5 - alpha.June.5
+    1. New function: Import % Export of users info with Excel file
+    2. New function: get date of FirstDay and mail addresses from user info, send contents individually
+    3. Update: Modified the structure of main menu in text
+    4. Update: Automatically organize contents of learning list according to Number of Kanzi (KanziNum)
+     
+2020.6.1 - alpha.June.1
     1. New function: Import & Export of contents with Excel file
     2. New function: Convert format between Json and Excel
     3. Combined all functions in a text menu
@@ -27,8 +33,7 @@ Japanese Learning Reminder
 
 
 # Next Plan
-1. Optimize params transfer between functions
-2. Upload data to MangoDB
+1. Upload data to MangoDB
 
 
 # List of Files
@@ -52,6 +57,12 @@ Contents_ExJ.py - Convert format between Excel and Json
 JLR_Contents.xlsx - Excel file of learning contents
 JLR_Contents.json - Json file of learning contents
 JLR_Contents - x.json - Backup file with max list number of x
+
+--- Users ---
+Users_ExJ.py - Management of user info, including inquiry, add new one, import and export
+
+UserInfo.json
+Users.xlsx
 
 --- documents ---
 README.md

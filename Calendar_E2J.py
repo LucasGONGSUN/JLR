@@ -4,28 +4,30 @@ import json
 # Settings
 WB = openpyxl.load_workbook('Calendar.xlsx')
 WS = WB['Jap']
-DateList = []
+rows = WS.max_row
+cols = WS.max_column
+NumberList = []
 NoteList = []
 Checklist = {}
 
 
 # === Create a learning list, save as a dict === #
 def Createlist():
-    # Read date from calendar
-    for row in WS.iter_rows(min_row=1, max_row=185, max_col=1):
+    # Read No. from calendar
+    for row in WS.iter_rows(min_row=2, max_row=rows, max_col=1):
         for cell in row:
-            DateList.append(cell.value)
+            NumberList.append(cell.value)
 
     # Read notelist from calendar
-    for row in WS.iter_rows(min_row=1, max_row=185, min_col=2, max_col=8):
+    for row in WS.iter_rows(min_row=2, max_row=rows, min_col=2, max_col=cols):
         new_row = []
         for cell in row:
             new_row.append(cell.value)
         NoteList.append(new_row)
 
-    # Combine date and notelist
-    for i in range(185):
-        Checklist[str(DateList[i])] = NoteList[i]
+    # Combine Number and notelist
+    for i in range(184):
+        Checklist[str(NumberList[i])] = NoteList[i]
 
 
 # === Save dict as json files === #
@@ -34,6 +36,9 @@ def Dict2Json():
     with open(FileJsonName, 'w') as file_obj:
         json.dump(Checklist, file_obj, indent=2)
 
-Createlist()
-Dict2Json()
-print('Mission Completed!')
+
+# === Save calendar to Json === #
+def Save2Json():
+    Createlist()
+    Dict2Json()
+    print('\n>>> Calendar is saved to Json file. <<<')

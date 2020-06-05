@@ -8,7 +8,7 @@ rows = WS.max_row
 cols = WS.max_column
 NumberList = []
 NoteList = []
-Checklist = {}
+CheckList = {}
 
 
 # === Create a learning list, save as a dict === #
@@ -27,14 +27,14 @@ def Createlist():
 
     # Combine Number and notelist
     for i in range(184):
-        Checklist[str(NumberList[i])] = NoteList[i]
+        CheckList[str(NumberList[i])] = NoteList[i]
 
 
 # === Save dict as json files === #
 def Dict2Json():
     FileJsonName = 'Calendar.json'
     with open(FileJsonName, 'w') as file_obj:
-        json.dump(Checklist, file_obj, indent=2)
+        json.dump(CheckList, file_obj, indent=2)
 
 
 # === Save calendar to Json === #

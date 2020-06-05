@@ -1,10 +1,13 @@
-import json, openpyxl, datetime
+import json, openpyxl, pymongo
+from datetime import datetime
 
 
 # Settings
 FileExcelName_User = 'Users.xlsx'
 FileJsonName_User = 'UserInfo.json'
 
+DatabaseName = 'JLR_Alpha_June'
+CollectionName = 'JLR_User_Local'
 
 # ##### Convert Excel contents to Json file ##### #
 def ExcelToJson():
@@ -58,6 +61,7 @@ def SaveJsonFile():
 
 # ##### Inquiry User List ##### #
 def ShowUserList():
+    global UserList
     # Load User Infos from Json file
     with open(FileJsonName_User, 'r') as ur:
         UserList = json.load(ur)
@@ -98,7 +102,7 @@ def AddNewUser():
         NewEntry = {}
         NewEntry['LearnerNumber'] = LearnerNumber
         NewEntry['ID'] = ID
-        NewEntry['FirstDay'] = str(datetime.datetime(2020, FirstDay_M, FirstDay_D, 0,0,0))
+        NewEntry['FirstDay'] = str(datetime(2020, FirstDay_M, FirstDay_D, 0,0,0))
         NewEntry['MailAddr'] = MailAddr
         
         # Save check
@@ -168,7 +172,44 @@ def SaveExcelFile():
         print('\nThe Excel file %s is running, please close it and try again.' %FileExcelName_User)
 
 
+# ##### Load Json file and upload to MongoDB ##### #
+# === Upload to MongoDB === #
+def UploadToMongoDB():
+    ConnectToDatabase()
+    CreateAndPost()
+
+
+# === Getting conection on database === #
+def ConnectToDatabase():
+    global client, db, collection
+    client = pymongo.MongoClient()
+    print('\nMaking a connection with MongoClient ...')
+    db = client[DatabaseName]
+    print('Getting Database - %s ...' %DatabaseName)
+    collection = db[CollectionName]
+    print('Getting a Collection - %s ...\n' %CollectionName)
+
+
+# === Create post contents and then post to database=== #
+def CreateAndPost():
+    # Create entry for posting
+    with open(FileJsonName_User, 'r') as ur:
+        UserList = json.load(ur)
+    for ln, contents in UserList.items():
+        PostEntry = {}
+        PostEntry['LearnerNumber'] = ln
+        PostEntry['Contents'] = contents
+        PostEntry['tags'] = 'JLR'
+        PostEntry['date'] = datetime.today()
+
+        # Post to MangoDB
+        post_id = collection.insert_one(PostEntry).inserted_id
+        print('Posted: %s - %s' %(PostEntry['LearnerNumber'], PostEntry['Contents']))
+
+
+# ##### Functions ##### #
 #ExcelToJson()
 #ShowUserList()
 #AddNewUser()
 #JsonToExcel()
+#UploadToMongoDB()

@@ -1,12 +1,19 @@
-import json, openpyxl
+import json, openpyxl, pymongo
 from math import ceil
+from datetime import datetime
 
 
 # Settings
 FileExcelName = 'JLR_Contents.xlsx'
 FileJsonName = 'JLR_Contents.json'
+
 KanzisNum = 15
 
+DatabaseName = 'JLR_Alpha_June'
+CollectionName = 'JLR_Local'
+
+
+# ##### Load Json file and save to Excel file ##### #
 # === Load Json file from FileJsonName === #
 def LoadJsonFile():
     global ContentList
@@ -46,6 +53,7 @@ def SaveExcelFile():
         print('\nThe Excel file %s is running, please close it and try again.' %FileExcelName)
 
 
+# ##### Load Excel file and save to Json file ##### #
 # === Load Excel file from FileJsonN
 def LoadExcelFile():
     global ws, rows, cols
@@ -106,6 +114,36 @@ def SaveJsonFile():
         json.dump(ContentList, jw, indent=2)
     print('\n>>> Excel contents are saved to Json file %s. <<<' %FileJsonName)
 
+
+# ##### Load Json file and upload to MongoDB ##### #
+# === Getting conection on database === #
+def ConnectToDatabase():
+    global client, db, collection, posts
+    client = pymongo.MongoClient()
+    print('\nMaking a connection with MongoClient ...')
+    db = client[DatabaseName]
+    print('Getting Database - %s ...' %DatabaseName)
+    collection = db[CollectionName]
+    print('Getting a Collection - %s ...\n' %CollectionName)
+
+
+# === Create post contents and then post to database=== #
+def CreateAndPost():
+    # Create entry for posting
+    for nums, values in ContentList.items():
+        for kanzi, contents in values.items():
+            PostEntry = {}
+            PostEntry['Kanzi'] = kanzi
+            PostEntry['Contents'] = contents
+            PostEntry['tags'] = nums
+            PostEntry['date'] = datetime.today()
+
+            # Post to MangoDB
+            post_id = collection.insert_one(PostEntry).inserted_id
+            print('Posted: %s - %s' %(PostEntry['Kanzi'], PostEntry['Contents']))
+
+
+# ##### Functions ##### #
 def JsonToExcel():
     LoadJsonFile()
     CreateListItems(ContentList)
@@ -118,5 +156,13 @@ def ExcelToJson():
     SaveJsonFile()
 
 
+def PostToMongoDB():
+    LoadJsonFile()
+    ConnectToDatabase()
+    CreateAndPost()
+    print('\n>>> All Json contents are uploaded to MangoDB')
+
+
 #JsonToExcel()
 #ExcelToJson()
+#PostToMongoDB()

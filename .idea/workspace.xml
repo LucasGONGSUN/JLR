@@ -19,20 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b002146-130e-4abe-80cc-d46030b057de" name="Default Changelist" comment="Alpha June.1">
-      <change afterPath="$PROJECT_DIR$/UserInfo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Users.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Users_ExJ.py" afterDir="false" />
+    <list default="true" id="7b002146-130e-4abe-80cc-d46030b057de" name="Default Changelist" comment="Alpha June.5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calendar.json" beforeDir="false" afterPath="$PROJECT_DIR$/Calendar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calendar.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Calendar.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calendar_E2J.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calendar_E2J.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contents_Inquiry.py" beforeDir="false" afterPath="$PROJECT_DIR$/Contents_Inquiry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JLR_Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/JLR_Contents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JLR_Contents.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/JLR_Contents.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contents_ExJ.py" beforeDir="false" afterPath="$PROJECT_DIR$/Contents_ExJxM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JLR_WorkFlowAndFileStructure.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/JLR_WorkFlowAndFileStructure.xmind" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainMenu.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SendReminder.py" beforeDir="false" afterPath="$PROJECT_DIR$/SendReminder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users_ExJ.py" beforeDir="false" afterPath="$PROJECT_DIR$/Users_ExJxM.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebCrawler" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -99,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Contents_Correct" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Contents_ExJxM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JLR" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,7 +106,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Contents_Correct.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\Contents_ExJxM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Contents_ExJ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Contents_JxM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JLR" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,7 +127,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\Contents_ExJ.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Contents_JxM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Users_ExJ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Users_ExJxM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JLR" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -174,7 +169,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Users_ExJ.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lucas\PycharmProjects\JLR\Users_ExJxM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,10 +181,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.MainMenu" />
-        <item itemvalue="Python.Users_ExJ" />
-        <item itemvalue="Python.Contents_ExJ" />
+        <item itemvalue="Python.Users_ExJxM" />
+        <item itemvalue="Python.Contents_JxM" />
+        <item itemvalue="Python.Contents_ExJxM" />
         <item itemvalue="Python.Calendar_E2J" />
-        <item itemvalue="Python.Contents_Correct" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591191087943</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Alpha June.5">
+      <created>1591289804079</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591289804079</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,37 +267,38 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="527 updated" />
     <MESSAGE value="Alpha June.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alpha June.1" />
+    <MESSAGE value="Alpha June.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha June.5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="638" y="345" width="639" height="477" key="#Notifications" timestamp="1590854028272">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="638" y="345" width="639" height="477" key="#Notifications/0.0.1504.963@0.0.1504.963" timestamp="1590854028272" />
-    <state x="533" y="237" key="FileChooserDialogImpl" timestamp="1590723595673">
+    <state x="533" y="237" key="FileChooserDialogImpl" timestamp="1591349839282">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="533" y="237" key="FileChooserDialogImpl/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590723595673" />
-    <state width="1483" height="533" key="GridCell.Tab.0.bottom" timestamp="1591289237492">
+    <state x="533" y="237" key="FileChooserDialogImpl/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591349839282" />
+    <state width="1483" height="191" key="GridCell.Tab.0.bottom" timestamp="1591364228639">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="266" key="GridCell.Tab.0.bottom/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591191357133" />
-    <state width="1483" height="533" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1591289237492" />
-    <state width="1483" height="533" key="GridCell.Tab.0.center" timestamp="1591289237492">
+    <state width="1483" height="191" key="GridCell.Tab.0.bottom/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591364228639" />
+    <state width="1483" height="203" key="GridCell.Tab.0.bottom/0.0.1504.963@0.0.1504.963" timestamp="1591290054960" />
+    <state width="1483" height="191" key="GridCell.Tab.0.center" timestamp="1591364228639">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="266" key="GridCell.Tab.0.center/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591191357133" />
-    <state width="1483" height="533" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1591289237492" />
-    <state width="1483" height="533" key="GridCell.Tab.0.left" timestamp="1591289237492">
+    <state width="1483" height="191" key="GridCell.Tab.0.center/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591364228639" />
+    <state width="1483" height="203" key="GridCell.Tab.0.center/0.0.1504.963@0.0.1504.963" timestamp="1591290054960" />
+    <state width="1483" height="191" key="GridCell.Tab.0.left" timestamp="1591364228639">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="266" key="GridCell.Tab.0.left/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591191357133" />
-    <state width="1483" height="533" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1591289237492" />
-    <state width="1483" height="533" key="GridCell.Tab.0.right" timestamp="1591289237492">
+    <state width="1483" height="191" key="GridCell.Tab.0.left/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591364228639" />
+    <state width="1483" height="203" key="GridCell.Tab.0.left/0.0.1504.963@0.0.1504.963" timestamp="1591290054959" />
+    <state width="1483" height="191" key="GridCell.Tab.0.right" timestamp="1591364228639">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state width="1483" height="266" key="GridCell.Tab.0.right/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591191357133" />
-    <state width="1483" height="533" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1591289237492" />
+    <state width="1483" height="191" key="GridCell.Tab.0.right/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591364228639" />
+    <state width="1483" height="203" key="GridCell.Tab.0.right/0.0.1504.963@0.0.1504.963" timestamp="1591290054960" />
     <state width="1483" height="236" key="GridCell.Tab.1.bottom" timestamp="1590770614510">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
@@ -317,11 +320,11 @@
     </state>
     <state x="254" y="127" key="SettingsEditor/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1590551301668" />
     <state x="254" y="127" key="SettingsEditor/0.0.1504.963@0.0.1504.963" timestamp="1590686707588" />
-    <state x="345" y="215" key="Vcs.Push.Dialog.v2" timestamp="1591191102724">
+    <state x="345" y="215" key="Vcs.Push.Dialog.v2" timestamp="1591289971695">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="345" y="215" key="Vcs.Push.Dialog.v2/0.0.1504.963/2256.0.1920.1040@0.0.1504.963" timestamp="1591191102724" />
-    <state x="345" y="215" key="Vcs.Push.Dialog.v2/0.0.1504.963@0.0.1504.963" timestamp="1591189674506" />
+    <state x="345" y="215" key="Vcs.Push.Dialog.v2/0.0.1504.963@0.0.1504.963" timestamp="1591289971695" />
     <state x="486" y="270" key="git4idea.merge.GitPullDialog" timestamp="1590853717494">
       <screen x="0" y="0" width="1504" height="963" />
     </state>

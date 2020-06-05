@@ -9,11 +9,11 @@ FileJsonName_date = 'Calendar.json'
 
 # === Load Json file from "FileJsonName" === #
 def LoadJsonFile():
-    global Checklist, ContentList, Userlist
+    global CheckList, ContentList, UserList
 
     # Load Calendar from 'Calendar.json'
     with open(FileJsonName_date, 'r') as dr:
-        Checklist = json.load(dr)
+        CheckList = json.load(dr)
 
     # Load Contents from 'JLR_Contents.json'
     with open(FileJsonName_content, 'r') as cr:
@@ -21,8 +21,8 @@ def LoadJsonFile():
 
     # Load User Info from 'UserInfo.json'
     with open(FileJsonName_user, 'r') as ur:
-        Userlist = json.load(ur)
-    return Checklist, ContentList, Userlist
+        UserList = json.load(ur)
+    return CheckList, ContentList, UserList
 
 # === Main Menu === #
 def MainMenu():
@@ -57,38 +57,51 @@ def MainMenu():
     
         1. Show List of Users
         2. Add A New User
+        
         3. Import User List from Excel to Json
-        4. Export User List From Json to Excel    
+        4. Export User List From Json to Excel
+        
+        5. Upload User List to MongoDB
+        6. Download User List from MongoDB
         
         ''')
             MethodChoice_User = input('Please Enter the NUMBER of a function: ')
 
             # Show users list
             if MethodChoice_User == '1':
-                from Users_ExJ import ShowUserList
+                from Users_ExJxM import ShowUserList
                 ShowUserList()
 
             # Add a new user
             if MethodChoice_User == '2':
-                from Users_ExJ import AddNewUser
+                from Users_ExJxM import AddNewUser
                 AddNewUser()
 
-            #User List from Excel to Json
+            # User List from Excel to Json
             if MethodChoice_User == '3':
-                from Users_ExJ import ExcelToJson
+                from Users_ExJxM import ExcelToJson
                 ExcelToJson()
 
-            #User List from Json to Excel
+            # User List from Json to Excel
             if MethodChoice_User == '4':
-                from Users_ExJ import  JsonToExcel
+                from Users_ExJxM import  JsonToExcel
                 JsonToExcel()
+
+            # Upload
+            if MethodChoice_User == '5':
+                from Users_ExJxM import UploadToMongoDB
+                UploadToMongoDB()
+
+            # Download
+            if MethodChoice_User == '6':
+                print('To be continue ...')
 
         # Edit Contents
         elif FunctionChoice == '3':
             print('''
-    ====== Please Choose A Method of Users ======
+    ====== Please Choose A Method of Contents ======
     
-        1. Load of Inquire for Entries
+        1. Load and Inquire for Entries
         2. Input A New Entry
         2. Continue An Unfinished Entry
         4. Correct Values
@@ -130,17 +143,18 @@ def MainMenu():
 
             # Import contents from Excel
             elif MethodChoice_Edit == '6':
-                from Contents_ExJ import ExcelToJson
+                from Contents_ExJxM import ExcelToJson
                 ExcelToJson()
 
             # Export to Excel
             elif MethodChoice_Edit == '7':
-                from Contents_ExJ import JsonToExcel
+                from Contents_ExJxM import JsonToExcel
                 JsonToExcel()
 
             # Upload to MangoDB
             elif MethodChoice_Edit == '8':
-                print('To be continued ... ')
+                from Contents_ExJxM import PostToMongoDB
+                PostToMongoDB()
 
             # Download From MangoDB
             elif MethodChoice_Edit == '9':

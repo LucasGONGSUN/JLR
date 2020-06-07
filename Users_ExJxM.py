@@ -7,7 +7,7 @@ FileExcelName_User = 'Users.xlsx'
 FileJsonName_User = 'UserInfo.json'
 
 DatabaseName = 'JLR_Alpha_June'
-CollectionName = 'JLR_User_Local'
+CollectionName = 'JLR_User'
 
 # ##### Convert Excel contents to Json file ##### #
 def ExcelToJson():
@@ -174,15 +174,16 @@ def SaveExcelFile():
 
 # ##### Load Json file and upload to MongoDB ##### #
 # === Upload to MongoDB === #
-def UploadToMongoDB():
-    ConnectToDatabase()
+def UploadToMongoDB(host, colname):
+    ConnectToDatabase(host, colname)
     CreateAndPost()
 
 
 # === Getting conection on database === #
-def ConnectToDatabase():
-    global client, db, collection
-    client = pymongo.MongoClient()
+def ConnectToDatabase(HostAddr, CollectionName):
+    global client, db, collection, posts
+    client = pymongo.MongoClient(HostAddr)
+
     print('\nMaking a connection with MongoClient ...')
     db = client[DatabaseName]
     print('Getting Database - %s ...' %DatabaseName)
@@ -205,6 +206,32 @@ def CreateAndPost():
         # Post to MangoDB
         post_id = collection.insert_one(PostEntry).inserted_id
         print('Posted: %s - %s' %(PostEntry['LearnerNumber'], PostEntry['Contents']))
+
+
+# ##### Download Users from MongoDB and save to Json ##### #
+def FindFromMongoDB(HostAddr, CollectionName):
+    # Connect to MongoDB
+    client = pymongo.MongoClient(HostAddr)
+    print('\nMaking a connection with MongoClient ...')
+    db = client[DatabaseName]
+    print('Getting Database - %s ...' % DatabaseName)
+    collection = db[CollectionName]
+    print('Getting a Collection - %s\n' % CollectionName)
+
+    # Download all contents
+    AllUsers = collection.find()
+
+    # Save Json contents
+    UserList = {}
+    for content in AllUsers:
+        EntryNum = content['LearnerNumber']
+        EntryContent = content['Contents']
+        UserList[EntryNum] = EntryContent
+
+    # Save to Json file
+    with open(FileJsonName_User, 'w') as jw:
+        json.dump(UserList, jw, indent=2)
+    print('\n>>> All Users from MongoDB are saved to Json file. %s <<<' %FileJsonName_User)
 
 
 # ##### Functions ##### #

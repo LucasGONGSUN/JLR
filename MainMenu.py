@@ -12,16 +12,26 @@ def LoadJsonFile():
     global CheckList, ContentList, UserList
 
     # Load Calendar from 'Calendar.json'
-    with open(FileJsonName_date, 'r') as dr:
-        CheckList = json.load(dr)
+    try:
+        with open(FileJsonName_date, 'r') as dr:
+            CheckList = json.load(dr)
+    except FileNotFoundError:
+        pass
 
     # Load Contents from 'JLR_Contents.json'
-    with open(FileJsonName_content, 'r') as cr:
-        ContentList = json.load(cr)
+    try:
+        with open(FileJsonName_content, 'r') as cr:
+            ContentList = json.load(cr)
+    except FileNotFoundError:
+        pass
 
     # Load User Info from 'UserInfo.json'
-    with open(FileJsonName_user, 'r') as ur:
-        UserList = json.load(ur)
+    try:
+        with open(FileJsonName_user, 'r') as ur:
+            UserList = json.load(ur)
+    except FileNotFoundError:
+        pass
+
     return CheckList, ContentList, UserList
 
 # === Main Menu === #
@@ -90,11 +100,20 @@ def MainMenu():
             # Upload
             if MethodChoice_User == '5':
                 from Users_ExJxM import UploadToMongoDB
-                UploadToMongoDB()
+                host = 'mongodb://localhost:27017'
+                #host = "mongodb+srv://lucassl3:lucas112358@alphajune-czcux.azure.mongodb.net/<dbname>" \
+                #       "?retryWrites=true&w=majority"
+                colname = 'JLR_User'
+                UploadToMongoDB(host, colname)
 
             # Download
             if MethodChoice_User == '6':
-                print('To be continue ...')
+                from Users_ExJxM import FindFromMongoDB
+                host = 'mongodb://localhost:27017'
+                #host = "mongodb+srv://lucassl3:lucas112358@alphajune-czcux.azure.mongodb.net/<dbname>" \
+                #       "?retryWrites=true&w=majority"
+                colname = 'JLR_User'
+                FindFromMongoDB(host, colname)
 
         # Edit Contents
         elif FunctionChoice == '3':
@@ -103,7 +122,7 @@ def MainMenu():
     
         1. Load and Inquire for Entries
         2. Input A New Entry
-        2. Continue An Unfinished Entry
+        3. Continue An Unfinished Entry
         4. Correct Values
         5. Save All Changes to Json File
         
@@ -154,11 +173,20 @@ def MainMenu():
             # Upload to MangoDB
             elif MethodChoice_Edit == '8':
                 from Contents_ExJxM import PostToMongoDB
-                PostToMongoDB()
+                host = 'mongodb://localhost:27017'
+                #host = "mongodb+srv://lucassl3:lucas112358@alphajune-czcux.azure.mongodb.net/" \
+                #       "<dbname>?retryWrites=true&w=majority"
+                colname = 'JLR_Local'
+                PostToMongoDB(host, colname)
 
             # Download From MangoDB
             elif MethodChoice_Edit == '9':
-                print('To be continued ... ')
+                from Contents_ExJxM import FindFromMongoDB
+                host = 'mongodb://localhost:27017'
+                #host = "mongodb+srv://lucassl3:lucas112358@alphajune-czcux.azure.mongodb.net/" \
+                #       "<dbname>?retryWrites=true&w=majority"
+                colname = 'JLR_Local'
+                FindFromMongoDB(host, colname)
 
         # Send Reminders
         elif FunctionChoice == '4':

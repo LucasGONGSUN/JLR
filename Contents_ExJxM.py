@@ -9,8 +9,9 @@ FileJsonName = 'JLR_Contents.json'
 
 KanzisNum = 15
 
+#HostAddr = 'mongodb://localhost:27017'
 DatabaseName = 'JLR_Alpha_June'
-CollectionName = 'JLR_Local'
+#CollectionName = 'JLR_Local'
 
 
 # ##### Load Json file and save to Excel file ##### #
@@ -117,9 +118,9 @@ def SaveJsonFile():
 
 # ##### Load Json file and upload to MongoDB ##### #
 # === Getting conection on database === #
-def ConnectToDatabase():
+def ConnectToDatabase(HostAddr, CollectionName):
     global client, db, collection, posts
-    client = pymongo.MongoClient()
+    client = pymongo.MongoClient(HostAddr)
     print('\nMaking a connection with MongoClient ...')
     db = client[DatabaseName]
     print('Getting Database - %s ...' %DatabaseName)
@@ -133,14 +134,49 @@ def CreateAndPost():
     for nums, values in ContentList.items():
         for kanzi, contents in values.items():
             PostEntry = {}
+            try:
+                id = 'Kanzi' + str(ord(kanzi))
+                PostEntry['_id'] = id
+            except TypeError:
+                print('Kanzi is null!')
+                continue
             PostEntry['Kanzi'] = kanzi
             PostEntry['Contents'] = contents
             PostEntry['tags'] = nums
             PostEntry['date'] = datetime.today()
 
             # Post to MangoDB
-            post_id = collection.insert_one(PostEntry).inserted_id
+            collection.insert_one(PostEntry)
             print('Posted: %s - %s' %(PostEntry['Kanzi'], PostEntry['Contents']))
+
+
+# ##### Download contents from MongoDB and save to Json ##### #
+def FindFromMongoDB(HostAddr, CollectionName):
+    # Connect to MongoDB
+    client = pymongo.MongoClient(HostAddr)
+    print('\nMaking a connection with MongoClient ...')
+    db = client[DatabaseName]
+    print('Getting Database - %s ...' % DatabaseName)
+    collection = db[CollectionName]
+    print('Getting a Collection - %s\n' % CollectionName)
+
+    # Download all contents
+    AllContents = collection.find()
+
+    # Save to Json contents
+    ContentList = {}
+    for content in AllContents:
+        EntryNum = content['tags']
+        EntryKanzi = content['Kanzi']
+        EntryContent = content['Contents']
+        if EntryNum not in ContentList.keys():
+            ContentList[EntryNum] = {}
+        ContentList[EntryNum][EntryKanzi] = EntryContent
+
+    # Save to Json file
+    with open(FileJsonName, 'w') as jw:
+        json.dump(ContentList, jw, indent=2)
+    print('\n>>> All Data from MongoDB are saved to Json file. %s <<<' %FileJsonName)
 
 
 # ##### Functions ##### #
@@ -156,9 +192,9 @@ def ExcelToJson():
     SaveJsonFile()
 
 
-def PostToMongoDB():
+def PostToMongoDB(host, colname):
     LoadJsonFile()
-    ConnectToDatabase()
+    ConnectToDatabase(host, colname)
     CreateAndPost()
     print('\n>>> All Json contents are uploaded to MangoDB')
 
@@ -166,3 +202,4 @@ def PostToMongoDB():
 #JsonToExcel()
 #ExcelToJson()
 #PostToMongoDB()
+#FindFromMongoDB()

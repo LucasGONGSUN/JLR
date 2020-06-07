@@ -4,6 +4,9 @@ Japanese Learning Reminder
 
 # Version Update Info.
 
+2020.6.6 - alpha.Juen.6
+    1. Update: Be able to upload to MongoDB Atlas Online
+    
 2020.6.5 - alpha.June.5
     1. New function: Import % Export of users info with Excel file
     2. New function: Get date of FirstDay and mail addresses from user info, send contents individually
